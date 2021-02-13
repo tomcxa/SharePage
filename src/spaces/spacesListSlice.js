@@ -28,6 +28,6 @@ const spacesListSlice = createSlice({
 });
 
 export const {
-    selectSpace,
+    getSpace,
 } = spacesListSlice.actions
 export default spacesListSlice.reducer

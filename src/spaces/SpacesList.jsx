@@ -3,7 +3,7 @@ import { Box } from 'grommet'
 import { useDispatch, useSelector } from 'react-redux'
 import SpaceItem from './SpacesListItem'
 import { useHistory } from 'react-router-dom'
-import { selectSpace } from './spacesListSlice'
+import { getSpace } from './spacesListSlice'
 
 const SpacesList = () => {
     const {spacesList, selectedSpace} = useSelector(state => state.spaces)
@@ -11,7 +11,7 @@ const SpacesList = () => {
     const history = useHistory()
 
     const setSelected = (item) => {
-        dispatch(selectSpace(item))
+        dispatch(getSpace(item))
     }
 
     useEffect(() => {
